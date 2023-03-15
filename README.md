@@ -1,3 +1,8 @@
+### Installation
+```bash
+pip install phonenumbers
+```
+
 ### How to use
 
 ```python3
