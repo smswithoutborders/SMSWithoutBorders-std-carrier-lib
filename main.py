@@ -2,8 +2,16 @@
 
 from helpers import CarrierInformation
 
+import sys
+
 if __name__ == "__main__":
     ci = CarrierInformation()
+
+    address = sys.argv[1]
+    phonenumber_name = ci.get_operator_name(phone_number=address)
+    print(phonenumber_name)
+
+    """
 
     operator_code = "62401" # MTN Cameroon
     phone_number = "+237690826242" # Orange Cameroon
@@ -29,3 +37,4 @@ if __name__ == "__main__":
 
     assert operator_name == expected_operator_name
     assert phonenumber_name == expected_phonenumber_name
+    """
