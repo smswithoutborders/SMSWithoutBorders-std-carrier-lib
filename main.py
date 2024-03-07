@@ -3,8 +3,16 @@
 from helpers import CarrierInformation
 
 import sys
+import logging
+
 
 if __name__ == "__main__":
+    logging.basicConfig(level=logging.INFO, format="%(message)s")
+
+    if len(sys.argv) < 2:
+        logging.info("Usage: python3 main.py [phone number]")
+        sys.exit(1)
+
     ci = CarrierInformation()
 
     address = sys.argv[1]
